@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep Résonance’s landing presentation in browser-safe components and centralized semantic CSS tokens; this preserves SSR and consistent themes.
+- Store beta leads only through the validated public signup server function with service-only table privileges; email addresses must never be publicly readable.
