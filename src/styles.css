@@ -208,6 +208,7 @@
 .faq-item.spark-faq { border-bottom-color:color-mix(in oklch,var(--spark) 30%,var(--border)); }
 .faq-item.spark-faq .faq-trigger { color:color-mix(in oklch,var(--spark) 50%,var(--foreground)); }
 .faq-spark-icon { color:var(--spark); width:14px; height:14px; flex-shrink:0; }
+.faq-q { display:flex; align-items:center; gap:9px; text-align:left; }
 .signup-section { text-align:center; }
 .signup-section .section-heading { max-width:700px; }
 .signup-section h2 { font-size:46px; }
