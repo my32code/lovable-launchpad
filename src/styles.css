@@ -146,7 +146,7 @@
 .step h3 { font-size:19px; font-weight:650; margin:0 0 12px; }
 .step p { font-size:13px; line-height:1.8; color:var(--muted-foreground); }
 .step-detail { display:flex; align-items:center; gap:7px; color:var(--primary); font-size:11px; margin-top:22px; }
-.offers { display:grid; grid-template-columns:1fr 1.22fr 1fr; gap:22px; margin-top:45px; align-items:end; }
+.offers { display:grid; grid-template-columns:1fr 1.38fr 1fr; gap:22px; margin-top:45px; }
 .offer { padding:30px; border:1px solid var(--border); border-radius:8px; background:var(--card); display:flex; flex-direction:column; transition:transform .3s, box-shadow .3s; }
 .offer:hover { transform:translateY(-5px); box-shadow:var(--shadow-soft); }
 .offer.featured { border-color:var(--primary); }
@@ -162,8 +162,8 @@
 .offer > ul { padding-top:16px; }
 .offer .quiet-button { margin-top:auto; justify-content:space-between; border-radius:6px; }
 .offer.featured .quiet-button { background:var(--secondary); border-color:var(--secondary); }
-.offer-types { display:flex; flex-direction:column; gap:10px; margin:-6px 0 6px; }
-.offer-type { border-top:1px solid var(--border); padding:12px 0; }
+.offer-types { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:-2px 0 8px; }
+.offer-type { border:1px solid var(--border); border-radius:7px; padding:13px 13px 14px; background:var(--background); }
 .offer-type strong { font-size:13px; font-weight:600; display:block; }
 .offer-type span { display:block; font-size:10px; color:var(--primary); font-weight:550; margin-top:2px; }
 .offer-type ul { list-style:none; padding:8px 0 0; margin:0; border-top:none; }
