@@ -11,3 +11,4 @@
 
 - Keep Résonance’s landing presentation in browser-safe components and centralized semantic CSS tokens; this preserves SSR and consistent themes.
 - Store beta leads only through the validated public signup server function with service-only table privileges; email addresses must never be publicly readable.
+- Keep every Résonance offer card on the shared "Le principe / L'impact" block structure so the three-card row stays height-balanced; rebalance the row by adding content to a card, never by stretching CSS spacing inside it.
