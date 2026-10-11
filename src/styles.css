@@ -163,6 +163,7 @@
 .offer .quiet-button { margin-top:auto; justify-content:space-between; border-radius:6px; }
 .offer.featured .quiet-button { background:var(--secondary); border-color:var(--secondary); }
 .offer-types { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:-2px 0 8px; }
+.offer-types.single { grid-template-columns:1fr; }
 .offer-type { border:1px solid var(--border); border-radius:7px; padding:13px 13px 14px; background:var(--background); }
 .offer-type strong { font-size:13px; font-weight:600; display:block; }
 .offer-type span { display:block; font-size:10px; color:var(--primary); font-weight:550; margin-top:2px; }
