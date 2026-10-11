@@ -110,10 +110,14 @@
 .hero h1 em::after { content:""; display:block; position:absolute; height:8px; bottom:-8px; left:0; width:100%; border-top:2px solid var(--primary); border-radius:50%; transform:rotate(-3deg); }
 .dark .hero h1 em { color:var(--primary); }
 .hero-description { max-width:405px; font-size:16px; line-height:1.8; color:var(--hero-muted); margin:0 0 30px; }
-.hero-actions { display:flex; gap:14px; align-items:center; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
 .hero .quiet-button { color:var(--hero-text); border-color:color-mix(in oklch,var(--hero-text) 30%,transparent); }
 .hero .quiet-button:hover { background:var(--hero-scrim); }
 .hero-footnote { display:flex; align-items:center; gap:7px; font-size:11px; color:var(--hero-muted); margin-top:17px; }
+.hero-beta-bonus { display:flex; align-items:center; gap:10px; margin:20px 0 0; color:var(--hero-text); font-size:13px; }
+.hero-beta-bonus > svg { color:var(--primary); flex-shrink:0; }
+.hero-beta-bonus strong,.hero-beta-bonus small { display:block; }
+.hero-beta-bonus small { margin-top:3px; font-size:11px; color:var(--hero-muted); }
 .connection-note { position:absolute; bottom:52px; right:28px; background:var(--card); border:1px solid var(--border); padding:15px 20px; border-radius:8px; display:flex; align-items:center; gap:12px; box-shadow:var(--shadow-float); animation:float-note 6s ease-in-out infinite; }
 .connection-icon { background:var(--secondary); color:var(--primary); width:38px; height:38px; border-radius:50%; display:grid; place-items:center; }
 .connection-note strong { display:block; font-size:12px; font-weight:650; }
@@ -158,7 +162,7 @@
 .offer .quiet-button { margin-top:auto; justify-content:space-between; border-radius:6px; }
 .offer.featured .quiet-button { background:var(--secondary); border-color:var(--secondary); }
 .offer-types { display:flex; flex-direction:column; gap:10px; margin:-6px 0 6px; }
-.offer-type { border:1px solid var(--border); border-radius:6px; padding:12px 14px; }
+.offer-type { border-top:1px solid var(--border); padding:12px 0; }
 .offer-type strong { font-size:13px; font-weight:600; display:block; }
 .offer-type span { display:block; font-size:10px; color:var(--primary); font-weight:550; margin-top:2px; }
 .offer-type ul { list-style:none; padding:8px 0 0; margin:0; border-top:none; }
@@ -203,6 +207,13 @@
 .signup-section .section-heading { max-width:700px; }
 .signup-section h2 { font-size:46px; }
 .beta-label { display:inline-flex; align-items:center; gap:7px; background:var(--secondary); color:var(--primary); padding:7px 12px; border-radius:99px; font-size:11px; }
+.signup-bonus { display:flex; align-items:center; justify-content:center; gap:14px; padding:20px 0; margin:22px auto 0; max-width:560px; border-block:1px solid var(--border); color:var(--primary); text-align:left; }
+.signup-bonus > svg { flex-shrink:0; }
+.signup-bonus strong { display:block; font-size:15px; line-height:1.6; }
+.signup-bonus span { display:block; font-size:12px; line-height:1.7; color:var(--muted-foreground); }
+.eclats-beta-bonus { display:flex; align-items:flex-start; gap:12px; margin:26px 0 0; color:var(--inverse-text); font-size:13px; line-height:1.7; }
+.eclats-beta-bonus svg { flex-shrink:0; color:var(--spark); margin-top:3px; }
+.eclats-beta-bonus strong { display:block; color:var(--spark); }
 .signup-form { max-width:560px; margin:30px auto 0; text-align:left; }
 .form-label { display:block; font-size:12px; font-weight:550; margin:16px 0 8px; }
 .form-row { display:flex; gap:10px; }
