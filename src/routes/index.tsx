@@ -24,12 +24,12 @@ function Brand() {
 }
 
 const steps = [
-  { number:'01', icon:Compass, title:'Commence par toi.', copy:'Tes objectifs, tes envies, ta façon d’aider. Un questionnaire pour comprendre ce qui compte vraiment pour toi.', detail:'Pas de profil à mettre en scène' },
-  { number:'02', icon:HeartHandshake, title:'Trouve ton écho.', copy:'Des personnes choisies pour leurs objectifs et leur façon d’aider, pas un profil à parcourir. Choisis un duo avec qui l’envie d’avancer est réciproque.', detail:'Pas de liste infinie. Pas de pression.' },
+  { number:'01', icon:Compass, title:'Commence par toi.', copy:'Tes objectifs, tes envies, ta façon d’aider. Un questionnaire pour comprendre ce qui compte vraiment pour toi.', detail:'Quelques minutes, en toute simplicité' },
+  { number:'02', icon:HeartHandshake, title:'Trouve ton écho.', copy:'Des personnes choisies pour leurs objectifs et leur façon d’aider. Choisis un duo avec qui l’envie d’avancer est partagée.', detail:'Chacun avance à son rythme.' },
   { number:'03', icon:Sprout, title:'Avancez, pour de vrai.', copy:'Un rendez-vous, une action concrète, un bilan. Construisez un rythme qui transforme vos intentions en progrès.', detail:'De petits pas. Un vrai changement.' },
 ];
 const offers = [
-  { icon:HeartHandshake, badge:'Gratuit', title:'Les duos', subtitle:'Un lien. Deux élans.', text:'Tu préfères avancer avec une seule personne, en confiance ? Le duo offre un cadre simple pour parler librement, recevoir un retour attentif et tenir tes engagements à deux. Un vrai choix pour avancer à ton rythme.', features:['2 Duos maximum en simultané','Connexion après accord mutuel','Messagerie et rendez-vous','Actions et bilans confidentiels'], cta:'Je veux trouver mon duo', featured:false },
+  { icon:HeartHandshake, badge:'Gratuit', title:'Les duos', subtitle:'Un lien. Deux élans.', text:'Tu préfères avancer avec une seule personne, en confiance ? Le duo offre un cadre simple pour parler librement, recevoir un retour attentif et tenir tes engagements à deux. Un vrai choix pour avancer à ton rythme.', features:['2 Duos maximum en simultané','Chacun valide avant d’échanger','Messagerie et rendez-vous','Actions et bilans confidentiels'], cta:'Je veux trouver mon duo', featured:false },
   { icon:Users, badge:'À venir · V2', title:'Les Cercles', subtitle:'Quatre esprits avancent plus vite qu’un seul.', text:'Quand vous bloquez, trois autres regards vous aident à trouver votre prochain pas. Un Cercle, c’est un rythme partagé, des retours sans filtre et la fin de la procrastination.', types:[
     { name:'Cercle entre pairs', tagline:'L’entraide à l’état pur', principe:'4 personnes aux objectifs complémentaires réunies autour d’un défi commun.', impact:'Croiser vos idées pour débloquer la suite et garder le cap grâce aux bilans partagés.' },
     { name:'Cercle avec coach', tagline:'L’accélération professionnelle', principe:'4 membres + 1 coach certifié pour guider le groupe.', impact:'Prioriser vos actions, décoder vos blocages profonds et ajuster votre plan de route.' },
@@ -50,7 +50,7 @@ const faqs = [
  { q:'Les Cercles, concrètement ?', a:'Les Cercles réunissent quatre personnes aux objectifs complémentaires. Deux formats sont prévus : le Cercle entre pairs, un espace d’entraide pur entre égaux, et le Cercle avec coach, où un coach professionnel guide les échanges. Entre pairs, les regards croisés aident à sortir d’une impasse et les engagements partagés à garder le rythme. Avec un coach, tu ajoutes un regard professionnel pour prioriser tes actions et travailler tes blocages. Ce sont des offres payantes, avec un tarif annoncé avant tout engagement. Ils arrivent en V2, après l’ouverture des duos.' },
  { q:'Est-ce que ce sera gratuit ?', a:'Les duos sont prévus gratuitement, avec 2 duos maximum en simultané. Le coaching professionnel est payant et indépendant de la mise en duo. Les Cercles, prévus en V2, seront payants. Les tarifs seront présentés avant tout engagement. S’inscrire sur la liste d’attente ne demande aucun paiement.' },
  { q:'Puis-je déjà utiliser Résonance ?', a:'Pas encore. Résonance est en phase de validation. Tu peux rejoindre la liste d’attente pour être informé de l’ouverture de la bêta privée et des opportunités de test. L’inscription n’est pas une garantie d’accès immédiat.' },
- { q:'Comment les binômes seront-ils proposés ?', a:'Le questionnaire permettra de prendre en compte les objectifs, les disponibilités et la façon d’aider de chacun. Une compatibilité est une estimation, jamais une garantie : la connexion restera un choix mutuel.' },
+ { q:'Comment les binômes seront-ils proposés ?', a:'Le questionnaire permettra de prendre en compte les objectifs, les disponibilités et la façon d’aider de chacun. Une compatibilité est une estimation, jamais une garantie : l’échange restera un choix des deux côtés.' },
 ];
 
 function Index() {
