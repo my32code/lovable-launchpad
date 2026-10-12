@@ -22,6 +22,7 @@ export type Database = {
           goal: string
           id: string
           kind: string
+          whatsapp: string | null
         }
         Insert: {
           consent_at?: string
@@ -30,6 +31,7 @@ export type Database = {
           goal?: string
           id?: string
           kind?: string
+          whatsapp?: string | null
         }
         Update: {
           consent_at?: string
@@ -38,6 +40,7 @@ export type Database = {
           goal?: string
           id?: string
           kind?: string
+          whatsapp?: string | null
         }
         Relationships: []
       }
