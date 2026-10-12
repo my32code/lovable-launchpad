@@ -21,6 +21,7 @@ export type Database = {
           email: string
           goal: string
           id: string
+          kind: string
         }
         Insert: {
           consent_at?: string
@@ -28,6 +29,7 @@ export type Database = {
           email: string
           goal?: string
           id?: string
+          kind?: string
         }
         Update: {
           consent_at?: string
@@ -35,6 +37,31 @@ export type Database = {
           email?: string
           goal?: string
           id?: string
+          kind?: string
+        }
+        Relationships: []
+      }
+      contact_messages: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
         }
         Relationships: []
       }
