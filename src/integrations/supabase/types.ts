@@ -22,6 +22,7 @@ export type Database = {
           goal: string
           id: string
           kind: string
+          obstacle: string | null
           whatsapp: string | null
         }
         Insert: {
@@ -31,6 +32,7 @@ export type Database = {
           goal?: string
           id?: string
           kind?: string
+          obstacle?: string | null
           whatsapp?: string | null
         }
         Update: {
@@ -40,6 +42,7 @@ export type Database = {
           goal?: string
           id?: string
           kind?: string
+          obstacle?: string | null
           whatsapp?: string | null
         }
         Relationships: []
