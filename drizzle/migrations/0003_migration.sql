@@ -1,0 +1,1 @@
+ALTER TABLE public.beta_waitlist ADD COLUMN IF NOT EXISTS obstacle text CHECK (obstacle IS NULL OR char_length(obstacle) <= 80);

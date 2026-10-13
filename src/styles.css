@@ -275,3 +275,16 @@
 @media (max-width:520px) {
  .header-actions>.resonance-button { display:none; } .hero h1 { font-size:43px; line-height:1.17; } .hero-actions { gap:10px; flex-wrap:wrap; } .hero-actions .resonance-button,.hero-actions .quiet-button { padding:0 17px; font-size:12px; } .hero .eyebrow { font-size:11px; } .hero-description { max-width:340px; } .hero-footnote { font-size:10px; } .hero { min-height:635px; } .hero-inner { min-height:635px; } .hero-copy { padding-top:44px; } .connection-note { bottom:24px; } .value-item { gap:7px; font-size:10px; } .value-item svg { width:14px; } .section-heading h2 { font-size:29px; } .steps { grid-template-columns:1fr; gap:32px; margin-top:35px; } .step-icon { float:left; margin:0 18px 8px 0; height:44px; width:44px; } .step p { clear:both; } .step-number { margin-bottom:16px; } .step-detail { margin-top:10px; } .goal-display { grid-template-columns:1fr; gap:8px; } .goal-checklist { padding:10px 0; border-left:0; } .goal-detail h3 { font-size:22px; } .goal-tabs { gap:8px; } .goal-tab { font-size:11px; padding-inline:13px; } .signup-section h2 { font-size:31px; } .form-row { flex-direction:column; } .form-row .resonance-button { width:100%; } .signup-assurance { gap:12px; flex-wrap:wrap; } .footer-links { gap:17px; flex-wrap:wrap; } .spark-card { padding:24px; } .spark-row { font-size:11px; } .faq-trigger { font-size:13px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } .reveal { opacity:1; transform:none; } }
+
+.signal-band { background: var(--muted); border-top: 1px solid var(--border); }
+.signal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 45px; }
+.signal-card { border: 1px solid var(--border); border-radius: 10px; padding: 22px; background: var(--background); }
+.signal-card svg { color: var(--primary); width: 22px; height: 22px; margin-bottom: 14px; }
+.signal-card h3 { font-size: 1.05rem; line-height: 1.4; margin-bottom: 10px; }
+.signal-card p { color: var(--muted-foreground); font-size: .92rem; line-height: 1.55; }
+.signal-conclusion { text-align: center; max-width: 680px; margin: 50px auto 0; }
+.signal-conclusion h3 { font-size: clamp(1.3rem, 2.4vw, 1.8rem); line-height: 1.35; }
+.signal-conclusion em { color: var(--primary); font-style: italic; }
+.signal-conclusion p { color: var(--muted-foreground); margin: 14px 0 24px; }
+@media (max-width: 1000px) { .signal-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .signal-grid { grid-template-columns: 1fr; } }
