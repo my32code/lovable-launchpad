@@ -18,7 +18,7 @@ export const joinWaitlist = createServerFn({ method: 'POST' })
     const kind = (count ?? 0) < BETA_SPOTS ? 'beta' : 'priority';
     if (kind === 'beta' && !data.whatsapp) return { ok: false, message: 'Ajoute ton numéro WhatsApp pour rejoindre les 50.' };
     const { error } = await supabaseAdmin.from('beta_waitlist').upsert(
-      { email: data.email, goal: data.goal, kind, whatsapp: data.whatsapp || null },
+      { email: data.email, goal: data.goal, kind, whatsapp: data.whatsapp || null, obstacle: data.obstacle || null },
       { onConflict: 'email', ignoreDuplicates: true },
     );
     if (error) return { ok: false, message: 'L’inscription n’a pas pu être enregistrée. Réessaie dans un instant.' };
