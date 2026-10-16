@@ -35,5 +35,7 @@ export const sendContact = createServerFn({ method: 'POST' })
     const { supabaseAdmin } = await import('@/integrations/supabase/client.server');
     const { error } = await supabaseAdmin.from('contact_messages').insert({ name: data.name, email: data.email, message: data.message });
     if (error) return { ok: false, message: 'Ton message n’a pas pu être envoyé. Réessaie dans un instant.' };
+    const { notifyOwnerOfContact } = await import('./signup-notify.server');
+    await notifyOwnerOfContact({ name: data.name, email: data.email, message: data.message });
     return { ok: true, message: 'Merci, ton message est bien arrivé.' };
   });
