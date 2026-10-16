@@ -17,11 +17,15 @@ export const joinWaitlist = createServerFn({ method: 'POST' })
     const { count } = await supabaseAdmin.from('beta_waitlist').select('id', { count: 'exact', head: true }).eq('kind', 'beta');
     const kind = (count ?? 0) < BETA_SPOTS ? 'beta' : 'priority';
     if (kind === 'beta' && !data.whatsapp) return { ok: false, message: 'Ajoute ton numéro WhatsApp pour rejoindre les 50.' };
-    const { error } = await supabaseAdmin.from('beta_waitlist').upsert(
+    const { data: inserted, error } = await supabaseAdmin.from('beta_waitlist').upsert(
       { email: data.email, goal: data.goal, kind, whatsapp: data.whatsapp || null, obstacle: data.obstacle || null },
       { onConflict: 'email', ignoreDuplicates: true },
-    );
+    ).select('id');
     if (error) return { ok: false, message: 'L’inscription n’a pas pu être enregistrée. Réessaie dans un instant.' };
+    if (inserted && inserted.length > 0) {
+      const { notifyOwnerOfSignup } = await import('./signup-notify.server');
+      await notifyOwnerOfSignup({ email: data.email, whatsapp: data.whatsapp, goal: data.goal, obstacle: data.obstacle, kind, position: (count ?? 0) + 1 });
+    }
     return { ok: true, message: 'Ton inscription est enregistrée.' };
   });
 
