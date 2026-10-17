@@ -6,6 +6,7 @@ export const waitlistSchema = z.object({
   whatsapp: z.string().trim().max(25).refine(v=>v===''||/^\+?[0-9 ().-]{8,24}$/.test(v)).optional().default(''),
   goal: z.enum(['Explorer Résonance', 'Confiance en soi', 'Organisation', 'Prise de parole', 'Projet personnel']),
   obstacle: z.union([z.enum(OBSTACLES), z.literal('')]).optional().default(''),
+  strengths: z.string().trim().max(200).optional().default(''),
   consent: z.literal(true),
   website: z.string().max(0),
 });
