@@ -104,7 +104,7 @@ function Index() {
   async function submit(event:FormEvent<HTMLFormElement>) {
     event.preventDefault(); setError('');
     const parsed = waitlistSchema.safeParse({email,whatsapp,obstacle,strengths,goal:selectedGoal,consent,website});
-    if (!parsed.success) { const f=parsed.error.issues[0]?.path[0]; setError(!consent ? 'Accepte d’être contacté au sujet de la bêta pour t’inscrire.' : f==='whatsapp' ? 'Entre un numéro WhatsApp valide avec l’indicatif (ex. +229 01 23 45 67).' : 'Entre une adresse e-mail valide.'); return; }
+    if (!parsed.success) { const f=parsed.error.issues[0]?.path[0]; setError(!consent ? 'Accepte d’être contacté au sujet de la bêta pour t’inscrire.' : f==='whatsapp' ? 'Entre un numéro WhatsApp valide avec l’indicatif (ex. +229 01 23 45 67).' : f==='obstacle' ? 'Choisis ce qui te freine le plus aujourd’hui.' : f==='strengths' ? 'Dis-nous ce que tu peux offrir ou partager.' : 'Entre une adresse e-mail valide.'); return; }
     setStatus('pending');
     try {
       const result = await signup({data:parsed.data});
