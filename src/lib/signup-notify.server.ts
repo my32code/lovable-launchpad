@@ -1,4 +1,4 @@
-const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] ?? c);
 const OWNER_EMAIL = 'princeadilehou@gmail.com';
 
 // Owner-only notification; never blocks or fails the action that triggered it.
@@ -21,9 +21,9 @@ async function sendOwnerEmail(title: string, subject: string, rows: [string, str
   }
 }
 
-export async function notifyOwnerOfSignup(d: { email: string; whatsapp: string; goal: string; obstacle: string; strengths?: string; kind: string; position: number }) {
+export async function notifyOwnerOfSignup(d: { email: string; whatsapp: string; goal: string; strengths: string; goal_detail?: string; strengths_detail?: string; kind: string; position: number }) {
   const label = d.kind === 'beta' ? `Membre bêta n°${d.position} / 50` : 'Liste prioritaire';
-  await sendOwnerEmail('Nouvelle inscription Résonance', `Nouvelle inscription — ${label}`, [['Type', label], ['E-mail', d.email], ['WhatsApp', d.whatsapp || '—'], ['Objectif', d.goal], ['Principal blocage', d.obstacle || '—'], ['Ce que la personne apporte', d.strengths || '—'], ['Date', new Date().toLocaleString('fr-FR', { timeZone: 'Africa/Lagos' })]]);
+  await sendOwnerEmail('Nouvelle inscription Résonance', `Nouvelle inscription — ${label}`, [['Type', label], ['E-mail', d.email], ['WhatsApp', d.whatsapp || '—'], ['Focus général', d.goal], ['Précision de l’objectif', d.goal_detail || 'Non précisée'], ['Domaine de force', d.strengths], ['Talent concret', d.strengths_detail || 'Non précisé'], ['Date', new Date().toLocaleString('fr-FR', { timeZone: 'Africa/Lagos' })]]);
 }
 
 export async function notifyOwnerOfContact(d: { name: string; email: string; message: string }) {
