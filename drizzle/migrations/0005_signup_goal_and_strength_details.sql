@@ -1,0 +1,2 @@
+ALTER TABLE public.beta_waitlist ADD COLUMN goal_detail text, ADD COLUMN strengths_detail text;
+COMMENT ON COLUMN public.beta_waitlist.obstacle IS 'DEPRECATED: no longer collected by the signup form; retained for existing registrations';
