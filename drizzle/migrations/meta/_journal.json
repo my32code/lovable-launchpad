@@ -36,6 +36,13 @@
       "when": 1792250460448,
       "tag": "0004_add_strengths",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1792311492128,
+      "tag": "0005_signup_goal_and_strength_details",
+      "breakpoints": true
     }
   ]
 }

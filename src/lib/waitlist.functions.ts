@@ -17,13 +17,13 @@ export const joinWaitlist = createServerFn({ method: 'POST' })
     const { count } = await supabaseAdmin.from('beta_waitlist').select('id', { count: 'exact', head: true }).eq('kind', 'beta');
     const kind = (count ?? 0) < BETA_SPOTS ? 'beta' : 'priority';
     const { data: inserted, error } = await supabaseAdmin.from('beta_waitlist').upsert(
-      { email: data.email, goal: data.goal, kind, whatsapp: data.whatsapp, obstacle: data.obstacle, strengths: data.strengths },
+      { email: data.email, goal: data.goal, kind, whatsapp: data.whatsapp, strengths: data.strengths, goal_detail: data.goal_detail || null, strengths_detail: data.strengths_detail || null },
       { onConflict: 'email', ignoreDuplicates: true },
     ).select('id');
     if (error) return { ok: false, message: 'L’inscription n’a pas pu être enregistrée. Réessaie dans un instant.' };
     if (inserted && inserted.length > 0) {
       const { notifyOwnerOfSignup } = await import('./signup-notify.server');
-      await notifyOwnerOfSignup({ email: data.email, whatsapp: data.whatsapp, goal: data.goal, obstacle: data.obstacle, strengths: data.strengths, kind, position: (count ?? 0) + 1 });
+      await notifyOwnerOfSignup({ email: data.email, whatsapp: data.whatsapp, goal: data.goal, strengths: data.strengths, goal_detail: data.goal_detail, strengths_detail: data.strengths_detail, kind, position: (count ?? 0) + 1 });
     }
     return { ok: true, message: 'Ton inscription est enregistrée.' };
   });

@@ -20,10 +20,12 @@ export type Database = {
           created_at: string
           email: string
           goal: string
+          goal_detail: string | null
           id: string
           kind: string
           obstacle: string | null
           strengths: string | null
+          strengths_detail: string | null
           whatsapp: string | null
         }
         Insert: {
@@ -31,10 +33,12 @@ export type Database = {
           created_at?: string
           email: string
           goal?: string
+          goal_detail?: string | null
           id?: string
           kind?: string
           obstacle?: string | null
           strengths?: string | null
+          strengths_detail?: string | null
           whatsapp?: string | null
         }
         Update: {
@@ -42,10 +46,12 @@ export type Database = {
           created_at?: string
           email?: string
           goal?: string
+          goal_detail?: string | null
           id?: string
           kind?: string
           obstacle?: string | null
           strengths?: string | null
+          strengths_detail?: string | null
           whatsapp?: string | null
         }
         Relationships: []
